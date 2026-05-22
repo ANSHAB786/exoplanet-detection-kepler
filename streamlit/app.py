@@ -16,6 +16,7 @@ def load_exoplanet_model():
         import os
         MODEL_PATH = os.path.join(os.path.dirname(__file__), 'Exoplanet.best.keras')
         return load_model(MODEL_PATH) # Model gets loaded here
+model_cnn = load_exoplanet_model()
 st.success("✔️ Model ready!")
 uploaded = st.file_uploader(
     "Choose the CSV file",
