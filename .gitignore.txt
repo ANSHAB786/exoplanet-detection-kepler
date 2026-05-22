@@ -1,0 +1,7 @@
+raw data/
+*.zip
+*.csv
+*.keras
+.ipynb_checkpoints/
+__pycache__/
+.env
