@@ -10,11 +10,12 @@ st.title("🔭Exoplanet Hunt")
 st.write("🪐Got a light curve ? Lets check for planets")
 st.caption("Upload your raw light curve -- To check if their exist a planet")
 
-@st.cache_resource # It will make the model load once and make it stays inside memory, and make it faster 
+@st.cache_resource                                          # It will make the model load once and make it stays inside memory, and make it faster 
 def load_exoplanet_model():
     with st.spinner("🔁Loading model"):
-        return load_model('Exoplanet.best.keras')
-model_cnn = load_exoplanet_model() # Model gets loaded here
+        import os
+        MODEL_PATH = os.path.join(os.path.dirname(__file__), 'Exoplanet.best.keras')
+        return load_model(MODEL_PATH) # Model gets loaded here
 st.success("✔️ Model ready!")
 uploaded = st.file_uploader(
     "Choose the CSV file",
