@@ -4,7 +4,11 @@
 > An end-to-end ML pipeline to classify exoplanet candidates from NASA Kepler flux time series — built to handle one of the harshest class imbalances in real-world scientific data.
 
 ---
+## 🚀 Live Demo
+👉 [Click here to try the app](https://exoplanet-detection-kepler-aq4qbisyyeestmt9hvweiv.streamlit.app/)
 
+
+---
 ## 📌 Project Overview
 
 Astronomers detect exoplanets by observing tiny dips in a star's brightness — a method called **transit photometry**. When a planet passes in front of its star, the light reaching us briefly drops. These dips are subtle, periodic, and buried in noise.
