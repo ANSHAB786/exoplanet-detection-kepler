@@ -6,8 +6,6 @@ import numpy as np
 import os
 
 st.set_page_config("Exoplanet Hunter", layout='wide')
-st.set_page_config("Exoplanet Hunter", layout='wide')
-
 
 with st.sidebar:
     st.title("🪐 About")
@@ -31,6 +29,12 @@ with st.sidebar:
     **⚠️ Limitation:**  
     Only ~37 positive training examples exist — overfitting is a known 
     constraint of this dataset.
+
+    ---         
+    **📋 Compatible formats:
+    - Kepler labelled time series (Kaggle) — exactly 3197 flux columns
+    - Longer light curves — handled via sliding window
+    - Shorter than 3197 points — not supported (model requires minimum 3197 flux values)
     
     ---
     🔗 [View on GitHub](https://github.com/ANSHAB786/exoplanet-detection-kepler)
@@ -86,7 +90,7 @@ def load_exoplanet_model():
 model_cnn = load_exoplanet_model()
 st.success("✔️ Model ready!")
  
-uploaded = st.file_uploader("Choose a CSV file", type=['csv', 'zip'])
+uploaded = st.file_uploader("Choose a CSV file", type=['csv'])
  
 if uploaded:
     # ── File decoding ──────────────────────────────────────────────────────────
