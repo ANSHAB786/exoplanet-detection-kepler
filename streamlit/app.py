@@ -73,10 +73,6 @@ with st.sidebar:
         st.cache_resource.clear()
         st.success("Cache cleared!")
 #-Main
-st.title("🔭Exoplanet Hunt")
-st.write("🪐Got a light curve ? Lets check for planets")
-st.caption("Upload your raw light curve -- To check if their exist a planet")
-
 st.title("🔭 Exoplanet Hunt")
 st.write("🪐 Got a light curve? Let's check for planets.")
 st.caption("Upload your raw light curve CSV — the model will scan each star for transit signals.")
