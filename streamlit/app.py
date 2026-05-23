@@ -157,7 +157,7 @@ if uploaded:
         # Light curve preview
         st.markdown("---")
         st.subheader("📈 Light Curve Preview")
-        preview_star = st.radio(
+        preview_star = st.selectbox(
             "Select a star to preview its light curve",
             options=result_df['Star'].tolist(),
             format_func=lambda x: f"Star {x} — {result_df[result_df['Star']==x]['Result'].values[0]}"
